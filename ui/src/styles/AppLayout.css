@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #05060d;
+  --panel: #0c1120;
+  --panel-strong: #0f1b31;
+  --border: #1f2a44;
+  --accent: #5af5c0;
+  --accent-strong: #1bd6b2;
+  --text: #e5eaf5;
+  --muted: #9aa2b5;
+  --shadow: 0 10px 50px rgba(0, 0, 0, 0.25);
+  font-family: 'Space Grotesk', 'Manrope', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(90, 245, 192, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 10%, rgba(99, 102, 241, 0.08), transparent 20%),
+    var(--bg);
+  color: var(--text);
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 32px 20px 48px;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.grid.two-col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.hero {
+  background: linear-gradient(120deg, rgba(26, 111, 255, 0.15), rgba(26, 255, 193, 0.12));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hero h1 {
+  margin: 4px 0;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+}
+
+.hero .lede {
+  color: var(--muted);
+  max-width: 720px;
+}
+
+.hero-pill {
+  background: rgba(12, 17, 32, 0.65);
+  border: 1px solid var(--border);
+  padding: 14px 18px;
+  border-radius: 14px;
+  text-align: right;
+  min-width: 220px;
+}
+
+.hero-pill .pill-badge {
+  margin-top: 8px;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 14px;
+  background: rgba(90, 245, 192, 0.14);
+  color: var(--accent);
+  border: 1px solid rgba(90, 245, 192, 0.4);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.pill-badge.muted {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.pill-badge.success {
+  background: rgba(90, 245, 192, 0.18);
+  border-color: rgba(90, 245, 192, 0.6);
+  color: #0adf8b;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+.lede,
+.section-copy,
+.hint,
+.status {
+  color: var(--muted);
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.markets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prediction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 16px;
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+}
+
+.status {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.status.error {
+  color: #ff8f8f;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-pill {
+    align-self: flex-start;
+  }
+}

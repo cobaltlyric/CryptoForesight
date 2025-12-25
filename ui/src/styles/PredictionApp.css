@@ -1,0 +1,12 @@
+.markets h2 {
+  margin: 2px 0;
+}
+
+.section-copy {
+  margin: 0;
+}
+
+.option-actions {
+  display: flex;
+  align-items: center;
+}
